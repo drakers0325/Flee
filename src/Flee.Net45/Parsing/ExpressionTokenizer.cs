@@ -138,6 +138,9 @@ namespace Flee.Parsing
             pattern = new TokenPattern(Convert.ToInt32(ExpressionConstants.IDENTIFIER), "IDENTIFIER", TokenPattern.PatternType.REGEXP, "[a-z_]\\w*");
             AddPattern(pattern);
 
+            pattern = new TokenPattern(Convert.ToInt32(ExpressionConstants.IDENTIFIER), "IDENTIFIER", TokenPattern.PatternType.REGEXP, "[가-힣_]+\\w*");
+            AddPattern(pattern);
+
             pattern = new TokenPattern(Convert.ToInt32(ExpressionConstants.HEX_LITERAL), "HEX_LITERAL", TokenPattern.PatternType.REGEXP, "0x[0-9a-f]+(u|l|ul|lu)?");
             AddPattern(pattern);
 
